@@ -1,0 +1,72 @@
+@font-face {
+	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+}
+
+a:link {
+	color: #42b983;
+}
+
+a:visited {
+	color: #42b983;
+}
+
+a:hover {}
+
+a:active {}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 20.8px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+	  h1 {
+		font-size: 36px;
+	}
+	h2 {
+		font-size: 20.8px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+
+	h5 {
+		font-size: 14px;
+	}
+}
+
+ul {
+	list-style: none;
+}

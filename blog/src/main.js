@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import App from './App.vue'
-import Header from './components/header.vue'
+import Header from './common/header.vue'
+import Footer from './common/footer.vue'
 
 Vue.use(VueRouter)
+
+Vue.component('my-head', Header)
 
 const Foo = {template: '<div>foo</div>'}
 
