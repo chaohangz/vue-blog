@@ -3,7 +3,7 @@
 		<div id="content_wrap">
 			<nav>
 				<router-link to="/home" id="home">BLOG</router-link>
-				<a id="life" v-on:mouseover="show = true" v-on:mouseout="show = false">
+				<div id="life" v-on:mouseover="show = true" v-on:mouseout="show = false">
 					LIFE<div id="life_arrow"></div>
 					<transition name="fade">
 						<div id="life_box" v-show="show">
@@ -13,7 +13,7 @@
 							<router-link to="/photo">PHOTO</router-link>
 						</div>
 					</transition>
-				</a>
+				</div>
 				<router-link to="/about" id="about">ABOUT</router-link>
 			</nav>
 			<router-view></router-view>
@@ -36,8 +36,15 @@
 	#content {
 		position: relative;
 		width: 100%;
-		height: 400px;
 		background: white;
+	}
+
+	#content a:hover {
+		color: #42b983;
+	}
+
+	#content a:active {
+		color: #42b983;
 	}
 
 	#content_wrap {
@@ -82,9 +89,6 @@
 
 	#life_box a {
 		color: black;
-	}
-	#content a:hover {
-		color: #42b983;
 	}
 
 	#about {
