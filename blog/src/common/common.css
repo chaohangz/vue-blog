@@ -14,18 +14,6 @@ a {
 	transition: all 0.3s ease-out;
 }
 
-a:link {
-	color: #42b983;
-}
-
-a:visited {
-	color: #42b983;
-}
-
-a:hover {}
-
-a:active {}
-
 h1 {
 	font-size: 36px;
 }
