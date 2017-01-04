@@ -1,9 +1,23 @@
 <template>
 	<div id="home_wrap">
-		<div class="posts_wrap" v-for="post in posts">
-			<time class="posts_time">{{ post.time }}</time>
-			<h2 class="posts_title"><a href="#">{{ post.title }}</a></h2>
-			<div class="posts_gist">{{ post.gist }}<a href="#" class="readmore">阅读全文</a>
+		<div class="left_wrap">
+			<div class="posts_wrap" v-for="post in posts">
+				<time class="posts_time">{{ post.time }}</time>
+				<router-link to="2016-11-17" class="posts_title">{{ post.title }}</router-link>
+				<div class="posts_gist">{{ post.gist }}<router-link to="2016-11-17" class="readmore">阅读全文</router-link>
+				</div>
+			</div>
+		</div>
+		<div class="sild_wrap">
+			<div class="search">
+				<input type="search" placeholder="Search...">
+				<button type="sublime"><img src="../assets/search.png"></button>
+			</div>
+			<div class="new_posts_list">
+				<h3>最新文章</h3>
+				<ul>
+					<li v-for="post in posts" class="new_posts_title"><router-link to="2016-11-17">{{ post.title }}</router-link></li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -18,20 +32,32 @@ export default {
 				{
 					time: '2016-11-17',
 					title: '浅谈芭芭拉拉小魔仙',
-					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙' +
-					'浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
+					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
 				},
 				{
 					time: '2016-11-17',
 					title: '浅谈芭芭拉拉小魔仙',
-					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙' +
-					'浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
+					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
 				},
 				{
 					time: '2016-11-17',
 					title: '浅谈芭芭拉拉小魔仙',
-					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙' +
-					'浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
+					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
+				},
+				{
+					time: '2016-11-17',
+					title: '浅谈芭芭拉拉小魔仙',
+					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
+				},
+				{
+					time: '2016-11-17',
+					title: '浅谈芭芭拉拉小魔仙',
+					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
+				},
+				{
+					time: '2016-11-17',
+					title: '浅谈芭芭拉拉小魔仙',
+					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
 				}
 			]
 		}
@@ -42,26 +68,28 @@ export default {
 <style>
 	#home_wrap {
 		overflow: hidden;
-		margin-top: 2rem;
 	}
-	.posts_wrap {
-		width: 60%;
+
+	.left_wrap {
 		float: left;
+		width: 60%;
+	}
+
+	.posts_wrap {
 		padding-bottom: 2rem;
 	}
 
 	.posts_time {
+		display: block;
 		color: #767676;
 		font-weight: bold;
 	}
 
 	.posts_title {
+		display: block;
 		font-size: 1.4rem;
 		font-weight: bold;
 		padding-top: .5rem;
-	}
-
-	.posts_title a {
 		color: #444;
 	}
 
@@ -75,4 +103,69 @@ export default {
 	.readmore {
 		color: blue;
 	}
+
+	.sild_wrap {
+		float: left;
+		padding-left: 5%;
+		width: 35%;
+	}
+
+	.search {
+		position: relative;
+		width: 90%;
+	}
+
+	.search input {
+		width: 100%;
+		height: 40px;
+		padding: 10px 5px;
+		border: 1px solid #bbb;
+		border-radius: 3px;
+		color: #666;
+		background: white;
+		outline: none;
+	}
+
+	.search input:focus {
+		border-color: black;
+	}
+
+	.search button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 38px;
+		height: 32px;
+		margin: 4px;
+		background: black;
+		border: 0;
+		border-radius: 3px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.search button img {
+		width: 20px;
+	}
+
+	.new_posts_list {
+		margin-top: 2.5rem;
+		font-size: 14px;
+	}
+
+	.new_posts_list ul {
+		margin-top: 1rem;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.new_posts_title {
+		padding: 12px 0;
+		border-top: 1px solid #ddd;
+	}
+
+	.new_posts_title a {
+		color: #222;
+	}
+
+
 </style>

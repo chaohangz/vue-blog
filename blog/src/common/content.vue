@@ -2,19 +2,19 @@
 	<div id="content">
 		<div id="content_wrap">
 			<nav>
-				<router-link to="/home" id="home">BLOG</router-link>
+				<router-link to="/" id="home">博客</router-link>
 				<div id="life" v-on:mouseover="show = true" v-on:mouseout="show = false">
-					LIFE<div id="life_arrow"></div>
+					生活<div id="life_arrow"></div>
 					<transition name="fade">
 						<div id="life_box" v-show="show">
-							<router-link to="/book">BOOK</router-link>
-							<router-link to="/movie">MOVIE</router-link>
-							<router-link to="music">MUSIC</router-link>
-							<router-link to="/photo">PHOTO</router-link>
+							<router-link to="/book">读书</router-link>
+							<router-link to="/movie">电影</router-link>
+							<router-link to="music">音乐</router-link>
+							<router-link to="/photo">摄影</router-link>
 						</div>
 					</transition>
 				</div>
-				<router-link to="/about" id="about">ABOUT</router-link>
+				<router-link to="/about" id="about">关于我</router-link>
 			</nav>
 			<router-view></router-view>
 		</div>
@@ -48,13 +48,14 @@
 	}
 
 	#content_wrap {
-		width: 60%;
+		width: 70%;
 		margin: 0 auto;
 	}
 
 	nav {
 		padding-top: 6rem;
-		font-size: 1.2rem;
+		padding-bottom: 4rem;
+		font-size: 1.8rem;
 		font-weight: bold;
 	}
 
@@ -68,27 +69,31 @@
 		display: inline-block;
 		cursor: pointer;
 		color: black;
-		padding-left: 20px;
-		padding-right: 10px;
+		padding-left: 30px;
+		padding-right: 20px;
 	}
 
 	#life_arrow {
 		float: right;
-		border: 6px solid;
+		border: 8px solid;
 		border-color: black transparent transparent transparent;
-		margin: 8px 6px;
+		margin: 0.9rem 6px;
 	}
 
 	#life_box {
 		position: absolute;
 		top: 0;
 		left: 0;
-		padding-top: 1.2rem;
-		padding-left: 20px;
+		margin-top: 1.9rem;
+		margin-left: 30px;
+		font-size: 1.4rem;
+		background: white;
 	}
 
 	#life_box a {
+		display: block;
 		color: black;
+		padding: 10px;
 	}
 
 	#about {

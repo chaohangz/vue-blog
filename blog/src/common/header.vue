@@ -27,7 +27,8 @@
 
 <style>
 	#header {
-		height: 1200px;
+		position: relative;
+		height: 600px;
 		height: 100vh;
 	}
 

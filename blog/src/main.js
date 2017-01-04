@@ -11,6 +11,8 @@ import Music from './components/music.vue'
 import Photo from './components/photo.vue'
 import About from './components/about.vue'
 
+import One from './components/one.vue'
+
 Vue.component('my-head', Header)
 
 Vue.component('my-content', Content)
@@ -20,7 +22,11 @@ Vue.component('my-content', Content)
 Vue.use(VueRouter)
 
 const routes = [
-	{path: '/home', component: Home},
+	{path: '/', component: Home,
+		children: [
+			{path: '2016-11-17', component: One}
+		]
+	},
 	{path: '/book', component: Book},
 	{path: '/movie', component: Movie},
 	{path: '/music', component: Music},
@@ -31,10 +37,6 @@ const routes = [
 const router = new VueRouter({
 	routes
 })
-
-// router.redirect({
-// 	'*': '/home'
-// })
 
 const app = new Vue({
 	router
