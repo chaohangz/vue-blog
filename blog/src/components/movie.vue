@@ -43,9 +43,5 @@
 </script>
 
 <style>
-	.movie_director,
-	.movie_actor {
-		padding-top: 10px;
-		color: #767676;
-	}
+
 </style>

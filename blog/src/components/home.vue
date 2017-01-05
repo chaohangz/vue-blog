@@ -105,14 +105,12 @@ export default {
 	}
 
 	.sild_wrap {
-		float: left;
-		padding-left: 5%;
-		width: 35%;
+		float: right;
+		width: 30%;
 	}
 
 	.search {
 		position: relative;
-		width: 90%;
 	}
 
 	.search input {

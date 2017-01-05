@@ -4,8 +4,8 @@
 			<div class="life_img"><img src="../assets/chuangbiangushi.jpg"></div>
 			<div class="life_info">
 				<h2 class="life_title"><a href="https://music.douban.com/subject/26812952/">{{ music.title }}</a></h2>
-				<h4 class="movie_director">歌手：{{ music.singer }}</h4>
-				<h4 class="movie_actor">发行时间：{{ music.time }}</h4>
+				<h4 class="music_singer">歌手：{{ music.singer }}</h4>
+				<h4 class="music_time">发行时间：{{ music.time }}</h4>
 				<p class="life_summary">简介：{{ music.summary }}</p>
 			</div>
 		</div>

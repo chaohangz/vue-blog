@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Header from './common/header.vue'
 import Content from './common/content.vue'
 import Footer from './common/footer.vue'
@@ -10,13 +11,11 @@ import Movie from './components/movie.vue'
 import Music from './components/music.vue'
 import Photo from './components/photo.vue'
 import About from './components/about.vue'
-
 import One from './components/one.vue'
 
 Vue.component('my-head', Header)
 
 Vue.component('my-content', Content)
-
 
 // router
 Vue.use(VueRouter)

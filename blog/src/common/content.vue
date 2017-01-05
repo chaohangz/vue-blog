@@ -16,7 +16,7 @@
 				</div>
 				<router-link to="/about" id="about">关于我</router-link>
 			</nav>
-			<router-view></router-view>
+			<router-view keep-alive></router-view>
 		</div>
 	</div>
 </template>
@@ -57,6 +57,7 @@
 		padding-bottom: 4rem;
 		font-size: 1.8rem;
 		font-weight: bold;
+		z-index: 999;
 	}
 
 	#home {
@@ -88,6 +89,7 @@
 		margin-left: 30px;
 		font-size: 1.4rem;
 		background: white;
+		z-index: 999;
 	}
 
 	#life_box a {

@@ -26,3 +26,11 @@
   padding-top: 15px;
   width: 80%;
 }
+
+.movie_director,
+.movie_actor,
+.music_singer,
+.music_time {
+	padding-top: 10px;
+	color: #767676;
+}
