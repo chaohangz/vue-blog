@@ -3,8 +3,8 @@
 		<div class="left_wrap">
 			<div class="posts_wrap" v-for="post in posts">
 				<time class="posts_time">{{ post.time }}</time>
-				<router-link to="2016-11-17" class="posts_title">{{ post.title }}</router-link>
-				<div class="posts_gist">{{ post.gist }}<router-link to="2016-11-17" class="readmore">阅读全文</router-link>
+				<router-link v-bind:to="post.time" class="posts_title">{{ post.title }}</router-link>
+				<div class="posts_gist">{{ post.gist }}<router-link v-bind:to="post.time" class="readmore">阅读全文</router-link>
 				</div>
 			</div>
 		</div>
@@ -35,7 +35,7 @@ export default {
 					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
 				},
 				{
-					time: '2016-11-17',
+					time: '2016-11-18',
 					title: '浅谈芭芭拉拉小魔仙',
 					gist: '浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙浅谈芭芭拉拉小魔仙'
 				},
@@ -75,6 +75,12 @@ export default {
 		width: 60%;
 	}
 
+	@media screen and (max-width: 767px) {
+		.left_wrap {
+			width: 100%;
+		}
+	}
+
 	.posts_wrap {
 		padding-bottom: 2rem;
 	}
@@ -107,6 +113,12 @@ export default {
 	.sild_wrap {
 		float: right;
 		width: 30%;
+	}
+
+	@media screen and (max-width: 767px) {
+		.sild_wrap {
+			display: none;
+		}
 	}
 
 	.search {

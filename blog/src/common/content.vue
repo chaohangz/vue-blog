@@ -2,8 +2,8 @@
 	<div id="content">
 		<div id="content_wrap">
 			<nav>
-				<router-link to="/" id="home">博客</router-link>
-				<div id="life" v-on:mouseover="show = true" v-on:mouseout="show = false">
+				<router-link to="/home" id="home">博客</router-link>
+				<div id="life" v-on:mouseover="show = true" v-on:click="show = true" v-on:mouseout="show = false">
 					生活<div id="life_arrow"></div>
 					<transition name="fade">
 						<div id="life_box" v-show="show">
@@ -18,15 +18,29 @@
 			</nav>
 			<router-view keep-alive></router-view>
 		</div>
+		<div id="goTop"></div>
 	</div>
 </template>
 
 <script>
+	import $ from 'jquery'
 	export default {
 		name: 'content',
 		data() {
 			return {
 				show: false
+			}
+		},
+		mounted() {
+			let goTop = $('#goTop')
+			let body = $('body')
+			goTop.click(function() {
+				body.animate({scrollTop: 0}, 500)
+				return false
+			});
+			console.log($(document).scrollTop())
+			if ($(document).scrollTop() < 500) {
+				goTop.css('display', 'none');
 			}
 		}
 	}
@@ -52,12 +66,25 @@
 		margin: 0 auto;
 	}
 
+	@media screen and (max-width: 767px) {
+		#content_wrap {
+			width: 90%;
+		}
+	}
+
 	nav {
 		padding-top: 6rem;
 		padding-bottom: 4rem;
 		font-size: 1.8rem;
 		font-weight: bold;
 		z-index: 999;
+	}
+
+	@media screen and (max-width: 767px) {
+		nav {
+			padding-top: 4rem;
+			padding-bottom: 3rem;
+		}
 	}
 
 	#home {
@@ -104,9 +131,29 @@
 	}
 
 	.fade-enter-active, .fade-leave-active {
-	  transition: opacity .5s;
+	  transition: opacity .6s;
 	}
 	.fade-enter, .fade-leave {
 	  opacity: 0;
+	}
+
+	#goTop {
+		cursor: pointer;
+		text-align: center;
+		width: 45px;
+		height: 45px;
+		color: #fff;
+		font-size: 40px;
+		line-height: 40px;
+		background: #565a5f;
+		opacity: 0.8;
+		border-radius: 4px;
+		bottom: 20px;
+		right: 100px;
+		position: fixed;
+	}
+
+	#goTop:before {
+		content: "\21E7";
 	}
 </style>

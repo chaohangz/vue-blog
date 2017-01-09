@@ -14,6 +14,7 @@
 </template>
 
 <script>
+	import $ from 'jquery'
 	export default {
 		name: 'header',
 		data() {
@@ -21,6 +22,12 @@
 				name: 'CHAOHANGZ',
 				title: '不如吃茶去'
 			}
+		},
+		mounted() {
+			$('.button_down').click(function () {
+				$('body').animate({scrollTop: $('#content').offset().top}, 500)
+				return false
+			})
 		}
 	}
 </script>
@@ -64,6 +71,7 @@
 	}
 
 	#header .text_box h1 {
+		font-family: 'Play', sans-serif;
 		color: white;
 		font-size: 3rem;
 	}

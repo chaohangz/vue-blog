@@ -16,53 +16,35 @@
 					{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}
 				]
 			}
-		},
-		mounted() {
-			let photo_wrap = $('#photo_wrap')
-			let photo_frame = $('.photo_frame')
-			let frameW = photo_frame.outerWidth()
-			let cols = Math.floor(photo_wrap.width() / frameW)
-			let hArr = []
-
-			photo_frame.each(function(index) {
-				let h = $(this).outerHeight()
-
-				if (index < cols) {
-					hArr.push(h)
-				} else {
-					let minH = Math.min.apply(null, hArr)
-					let minIndex = $.inArray(minH, hArr) // 返回minH的索引
-
-					$(this).css({
-						'position': 'absolute',
-						'top': minH + 'px',
-						'left': frameW * minIndex + 'px'
-					})
-
-					hArr[minIndex] += $(this).outerWidth()
-				}
-			});
 		}
 	}
 </script>
 
 <style>
 	#photo_wrap {
-		position: relative;
-		overflow: hidden;
+		text-align: center;
 		width: 100%;
+		overflow: hidden;
 	}
 
 	.photo_frame {
-		float: left;
-		width: 24%;
-		height: auto;
+		width: 200px;
+		height: 200px;
+		display: inline-block;
 		padding-right: 1%;
 		padding-top: 8px;
+		overflow: hidden;
+	}
+
+	@media screen and (max-width: 767px) {
+		.photo_frame {
+			width: 100px;
+			height: 100px;
+		}
 	}
 
 	.photo_frame img {
 		width: 100%;
-		height: auto;
+		border-radius: 3px;
 	}
 </style>

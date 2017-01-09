@@ -1,7 +1,5 @@
-@font-face {
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
-	font-weight: normal;
-	font-style: normal;
+body {
+	font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif,"宋体";
 }
 
 * {
@@ -13,6 +11,7 @@ a {
 	text-decoration: none;
 	transition: all 0.3s ease-out;
 }
+a:hover {color: #42b983;}
 
 h1 {
 	font-size: 2rem;

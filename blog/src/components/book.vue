@@ -7,9 +7,9 @@
 			<div class="life_info">
 				<h2 class="life_title"><a href="https://book.douban.com/subject/1049584/">{{ book.title }}<a></h2>
 				<h4 class="book_author">作者：{{ book.author }}</h4>
-				<p class="life_summary">简介：{{ book.summary }}</p>
 				<div class="book_read"><router-link to="/book">{{ book.read }}</router-link></div>
 			</div>
+			<p class="life_summary">简介：{{ book.summary }}</p>
 		</div>
 	</div>
 </template>

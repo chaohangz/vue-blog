@@ -6,8 +6,8 @@
 				<h2 class="life_title"><a href="https://movie.douban.com/subject/1418200/">{{ movie.title }}</a></h2>
 				<h4 class="movie_director">导演：{{ movie.director }}</h4>
 				<h4 class="movie_actor">主演：{{ movie.actor }}</h4>
-				<p class="life_summary">简介：{{ movie.summary }}</p>
 			</div>
+			<p class="life_summary">简介：{{ movie.summary }}</p>
 		</div>
 	</div>
 </template>
